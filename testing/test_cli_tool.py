@@ -12,9 +12,10 @@ def test_add_task():
 def test_complete_task_with_script(tmp_path):
     """Runs everything in one subprocess so state is shared."""
     script_path = tmp_path / "script.py"
+    current_dir = os.getcwd().replace("\\", "/")  # Ensure consistent path format across OSes
     script_content = f"""
 import sys
-sys.path.insert(0, '{os.getcwd().replace("\\", "/")}')
+sys.path.insert(0, "{current_dir}")
 
 from lib.models import Task, User
 

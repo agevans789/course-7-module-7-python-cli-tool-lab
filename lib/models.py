@@ -13,7 +13,7 @@ class Task:
         # TODO: Mark the task as complete
         # TODO: Print a confirmation message
         self.completed = True
-        print(f"✅ Task '{self.title}' marked as complete.")
+        print(f"✅ Task '{self.title}' completed.")
 
 # TODO: Define the User class
 # Each user has a name and a list of tasks
